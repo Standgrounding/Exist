@@ -1,0 +1,51 @@
+#Features that can be disabled
+#Enabled by default, and will check for the following cheats:
+EnableSessionStealer: true
+EnableXRay: true
+EnableInventoryMacro: true
+EnableBlockMacro: true
+EnableFly: true
+EnableTPHack: true
+#Inventory Macro
+#Blocks players from instantly taking everything from chests
+UnhealthyInvItemMoveSpeed: 100 
+#Measured in miliseconds
+#Some clients for kill auras rotate your "inner mouse" very fast, so angular velocities are required
+#to check for cheat...
+#While others simply send damage packet while not even looking at enemy player, hence different
+#methods of checking cheats
+EnableForcefield: true
+UnhealthyAngularVelocity: 30 # degrees/milisecond?
+UnhealthyTPS: 65 #miliseconds per tick for the server not to run properly. Players will not be punnished
+#when server is running at 1000/UnhealthyTPS tickrate.(Default is 65 and equals to 15.3 ticks/second,
+#which indicates severe lag)
+UnhealthyReach: 3.4 #maximum reach for reach hacks
+EnableAntiKB: true
+EnableAngularAura: true
+MaximumAngularVelocity: 180.0 #angle per milisecond. Simply adds change in yaw to change in pitch.
+#Not sure if mathematically this is correct.
+MessageForAngularKillAura: Banned for Kill Aura. No living thing can survive that much angular velocity
+MessageForMultihit: Can't hit two entities at once!
+MessageForCrosshairMismatch: You aren\'t even looking at your enemy. How can you hit him/her?
+MessageForAntiKB: Banned for not being affected by knockback.
+MessageForInventoryMacro: You can't take all the items so fast!
+MessageForBlockMacro: You can't place the blocks that fast! #IMPLEMENTED THIS UPDATE
+MessageForXRay: Nobody is allowed to see through stone.
+MessageForFly: You aren't allowed to fly.
+MessageForTeleportHack: You aren't allowed to freely teleport without commands.
+MessageForBlockNuke: Griefing with hacks is disabled.
+#Force OP has no messages because bans aren't implemented! Implementing bans there would
+#create a dozen of possible exploits(banning a player the cheater wants to get banned)
+#, so the anticheat simply blocks the attempt.
+#-------------------------------------------------------------------------------------
+# Punishment methods for offenses - "KICK", "KILL" or "BAN". MUST BE UPPERCASE.
+PunishXRay: BAN
+PunishAura: BAN
+PunishAntiKB: BAN
+PunishMacro: BAN
+PunishFastplacer: BAN
+#If you wish to disable the features due to performance issues or bugs, set to "false".
+#Any feedback and bug reports are greatly appreciated!
+#===========================================
+#Exist - because cheaters no longer exist!
+#Experimental version made by Standgrounding
